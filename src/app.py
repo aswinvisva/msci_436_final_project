@@ -73,3 +73,8 @@ y_pred=clf.predict(row)[0]
 if st.button('Diagnose'):
      st.write('Model Prediction: %.3g probability of heart disease' % y_pred)
 
+     if y_pred > 0.5:
+          st.write('Patient may have heart disease based on the model\'s prediction')
+     else:
+          st.write('Patient may not have heart disease based on the model\'s prediction')
+
